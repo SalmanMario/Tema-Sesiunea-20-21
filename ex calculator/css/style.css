@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #1982c4;
+}
+
+h1 {
+  color: #ffca3a;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+}
+
+.container {
+  text-align: center;
+}
+
+.add,
+.substract,
+.divide,
+.multiply {
+  background-color: #8ac926;
+  color: white;
+  width: 35px;
+  height: 35px;
+  font-size: 2rem;
+  border: 2px solid #ffca3a;
+  margin-left: 2rem;
+  border-radius: 4px;
+}
+
+.buttons {
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+input {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.form-result {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  color: #d6f6dd;
+}
+
+.error-message {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #e90e2c;
+}
