@@ -22,57 +22,35 @@ function validateInput(value) {
 firstNumber.addEventListener("input", function (event) {
     const firstNumber = event.target.value;
     validateInput(firstNumber);
-    console.log(firstNumber);
 });
 
 secondNumber.addEventListener("input", function (event) {
     const secondNumber = event.target.value;
     validateInput(secondNumber);
-    console.log(secondNumber);
 });
 
-addButton.addEventListener("click", function () {
-
+function execOperation(operationName, op) {
     const first = Number(firstNumber.value);
     const second = Number(secondNumber.value);
-    const result = first + second;
+    const result = op(first, second);
 
-    console.log({ firstNumber, secondNumber });
+    formResult.innerHTML = `Rezulatul operatiei de ${operationName} este: ${result}`;
+}
 
-    console.log(result);
-    formResult.innerHTML = `Rezulatul operatiei de adunare este: ${result}`;
+addButton.addEventListener("click", function () {
+    execOperation("adunare", (a, b) => a + b);
 });
 
 substractButton.addEventListener("click", function () {
-    const first = Number(firstNumber.value);
-    const second = Number(secondNumber.value);
-    const result = first - second;
-
-    console.log({ firstNumber, secondNumber });
-    console.log(result);
-    formResult.innerHTML = `Rezulatul operatiei de scadere este: ${result}`;
+    execOperation("scadere", (a, b) => a - b);
 });
 
 divideButton.addEventListener("click", function () {
-    const first = Number(firstNumber.value);
-    const second = Number(secondNumber.value);
-    const result = first / second;
-
-    console.log({ firstNumber, secondNumber });
-
-    console.log(result);
-    formResult.innerHTML = `Rezulatul operatiei de impartire este: ${result}`;
+    execOperation("impartire", (a, b) => a / b);
 });
 
 multiplyButton.addEventListener("click", function () {
-    const first = Number(firstNumber.value);
-    const second = Number(secondNumber.value);
-    const result = first * second;
-
-    console.log({ firstNumber, secondNumber });
-
-    console.log(result);
-    formResult.innerHTML = `Rezulatul operatiei de inmultire este: ${result}`;
+    execOperation("inmultire", (a, b) => a * b);
 });
 
 
